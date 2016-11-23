@@ -1,0 +1,27 @@
+{
+  "name": "achievements",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/abachar/achievements.git",
+  "author": "Abdelhakim Bachar, Thibaut Mottet, Seraphin Burgermeister",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "^0.14.50",
+    "@types/react-dom": "^0.14.19",
+    "@types/redux": "^3.6.31",
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^1.2.2",
+    "typescript": "^2.0.10",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

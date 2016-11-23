@@ -1,0 +1,14 @@
+# OS generated files
+.DS_Store
+
+# Logs
+*.log
+
+# Output folder
+dist/
+
+# Dependency directories
+node_modules/
+
+# Yarn Integrity file
+.yarn-integrity
