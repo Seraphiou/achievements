@@ -12,7 +12,8 @@
   "dependencies": {
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "tslint-react": "^2.0.0"
   },
   "devDependencies": {
     "@types/react": "^0.14.50",
@@ -20,6 +21,8 @@
     "@types/redux": "^3.6.31",
     "source-map-loader": "^0.1.5",
     "ts-loader": "^1.2.2",
+    "tslint": "^4.0.2",
+    "tslint-loader": "^3.2.0",
     "typescript": "^2.0.10",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"
