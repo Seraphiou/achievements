@@ -13,9 +13,9 @@ interface IApp {
 
 const App: StatelessComponent<IApp> = () => (
     <div className='keynote'>
-        <ViewPort />
+        <ViewPort/>
         <AffixBar/>
-        <Navigation />
+        <Navigation/>
     </div>
 );
 
