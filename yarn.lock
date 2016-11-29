@@ -43,9 +43,13 @@
   dependencies:
     "@types/source-map" "*"
 
-"@types/webpack@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-2.0.0.tgz#e7934a1c0bb628e1940f090c0afd2682817c1def"
+"@types/webpack-env@^1.12.1":
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/@types/webpack-env/-/webpack-env-1.12.1.tgz#3cc5373201a70e8381026a09eabf0f4a3301b3c4"
+
+"@types/webpack@^1.12.9":
+  version "1.12.36"
+  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-1.12.36.tgz#46349f6fb34549ef472a96c5cec030a544f26924"
   dependencies:
     "@types/uglify-js" "*"
 

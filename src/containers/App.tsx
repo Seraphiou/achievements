@@ -3,7 +3,7 @@ import { ReactNode, StatelessComponent } from 'react';
 import './App.scss';
 
 import AffixBar from '../components/AffixBar';
-import Navigation from '../components/Navigation/Navigation';
+import Navigation from '../components/Navigation';
 import ViewPort from '../components/ViewPort';
 
 // Keynote

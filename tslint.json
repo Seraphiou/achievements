@@ -15,6 +15,7 @@
       true,
       "single",
       "avoid-escape"
-    ]
+    ],
+    "no-string-literal": false
   }
 }

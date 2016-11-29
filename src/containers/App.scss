@@ -4,8 +4,31 @@ html, body {
 }
 
 .keynote {
-    background: #00f;
-    background-image: url('../icons/chevron-up.svg?fill=red');
-    background-size: 80px 60px;
+    position: relative;
+    background: #e5e5e5;
+    width: 100vw;
     height: 100vh;
+}
+
+.view-port {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.affix-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100vh;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 40px;
+    left: 50%;
+    margin-left: -60px;
 }

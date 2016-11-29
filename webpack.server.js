@@ -9,20 +9,16 @@ var app = express();
 var compiler = webpack(config);
 
 app.use(devMiddleware(compiler, {
-  publicPath: config.output.publicPath,
-  historyApiFallback: true,
+    publicPath: config.output.publicPath,
+    historyApiFallback: true
 }));
-
 app.use(hotMiddleware(compiler));
-
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+app.use(express.static('public'));
 
 app.listen(3000, function (err) {
-  if (err) {
-    return console.error(err);
-  }
+    if (err) {
+        return console.error(err);
+    }
 
-  console.log('Listening at http://localhost:3000/');
+    console.log('Listening at http://localhost:3000/');
 });

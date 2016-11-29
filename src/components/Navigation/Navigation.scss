@@ -1,7 +1,8 @@
 .navigation {
-  display: inline-block;
-  border: 2px #000;
-  background: #818181;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 0 0;
+  padding: 10px 10px 0 10px;
+  text-align: center;
 
   button {
     &.next {
@@ -12,12 +13,12 @@
       border: 0;
       line-height: 30px;
       border-radius: 50%;
-      background: #fff url('../../icons/chevron-up.svg?fill=black') center no-repeat;
+      background: #fff url('/images/icons/chevron-up.svg') center no-repeat;
       background-size: 15px 15px;
       cursor: pointer;
     }
     &.next:hover {
-      background: #e4e4e4 url('../../icons/chevron-up.svg?fill=black') center no-repeat;
+      background: #e4e4e4 url('/images/icons/chevron-up.svg') center no-repeat;
       background-size: 15px 15px;
     }
 
@@ -29,12 +30,12 @@
       border: 0;
       line-height: 30px;
       border-radius: 50%;
-      background: #fff url('../../icons/chevron-down.svg?fill=black') center no-repeat;
+      background: #fff url('/images/icons/chevron-down.svg') center no-repeat;
       background-size: 15px 15px;
       cursor: pointer;
     }
     &.previous:hover {
-      background: #e4e4e4 url('../../icons/chevron-down.svg?fill=black') center no-repeat;
+      background: #e4e4e4 url('/images/icons/chevron-down.svg') center no-repeat;
       background-size: 15px 15px;
     }
   }

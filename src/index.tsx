@@ -8,7 +8,7 @@ import createStore from './store/createStore';
 
 const store = createStore();
 
-const rootEl = document.getElementById('app');
+const rootEl = document.getElementById('root');
 render(
     <AppContainer>
         <Provider store={store}>
@@ -17,3 +17,17 @@ render(
     </AppContainer>,
     rootEl
 );
+
+if ('hot' in module) {
+    module['hot']['accept']('./containers/App', () => {
+        const NextApp = require('./containers/App').default;
+        render(
+            <AppContainer>
+                <Provider store={store}>
+                    <NextApp />
+                </Provider>
+            </AppContainer>,
+            rootEl
+        );
+    });
+}
