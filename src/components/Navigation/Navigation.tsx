@@ -9,8 +9,8 @@ interface INavigation {
 
 const Navigation: StatelessComponent<INavigation> = (props) => (
     <div className='navigation'>
-        <Button action='NEXT_PAGE' icon='next_icone' class='next'/>
-        <Button action='PREVIOUS_PAGE' icon='previsou_icone' class='previous'/>
+        <Button action='NextPage' icon='next'/>
+        <Button action='PreviousPage' icon='previous' />
     </div>
 );
 

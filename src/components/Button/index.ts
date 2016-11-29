@@ -1,6 +1,7 @@
 import {connect} from 'react-redux'
 
 import Button from './Button';
+import './Button.scss';
 
 const mapStateToProps = (state, ownProps) => ({});
 

@@ -1,14 +1,25 @@
 import * as React from 'react';
-import { StatelessComponent } from 'react';
+import {StatelessComponent} from 'react';
 
-interface IButton {
-    class: string;
-    action: string;
-    icon: string;
+enum ButtonIcon {
+    HOME,
+    QUESTION,
+    PREVIOUS,
+    NEXT
 }
 
-const Button: StatelessComponent<IButton> = (props) => (
-    <button className={props.class} />
-);
+interface IButton {
+    action: string;
+    icon: ButtonIcon;
+    className: string;
+}
+
+const Button: StatelessComponent<IButton> = ({action, icon, className}) => {
+    const fullClassName = `button button-${icon} ${className}`;
+
+    return (
+        <button className={fullClassName} />
+    );
+};
 
 export default Button;

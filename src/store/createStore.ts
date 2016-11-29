@@ -1,14 +1,14 @@
-import { createStore } from 'redux';
+import {createStore} from 'redux';
 import rootReducer from '../reducers';
 
-enum Page {
+export enum Page {
     HOME = 0,
-    // ...
     QUESTIONS
 }
 
-interface IState {
-    activePage : Page;
+export class ApplicationState {
+    public constructor(public activePage: Page) {
+    }
 }
 
 export default () => createStore(rootReducer);

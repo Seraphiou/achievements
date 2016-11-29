@@ -1,15 +1,19 @@
 import * as React from 'react';
 import {StatelessComponent} from 'react';
 
+import Button from '../Button';
+
 interface IAffixBar {
 }
 
+// TODO manage is active
+
 const AffixBar: StatelessComponent<IAffixBar> = (props) => (
     <div className='affix-bar'>
-        <div className='navs'>
-            <div className='button active'><i className='home'/></div>
-            <div className='button'><i className='question'/></div>
-        </div>
+        <nav>
+            <Button action='GoHomePage' icon='home' />
+            <Button action='GoQuestionPage' icon='question' />
+        </nav>
     </div>
 );
 
