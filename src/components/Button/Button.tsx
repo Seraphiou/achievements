@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {StatelessComponent} from 'react';
 
-enum ButtonIcon {
+export enum ButtonIcon {
     HOME,
     QUESTION,
     PREVIOUS,
@@ -10,12 +10,13 @@ enum ButtonIcon {
 
 interface IButton {
     action: string;
-    icon: ButtonIcon;
-    className: string;
+    icon: string;
+    active: boolean;
 }
 
-const Button: StatelessComponent<IButton> = ({action, icon, className}) => {
-    const fullClassName = `button button-${icon} ${className}`;
+const Button: StatelessComponent<IButton> = ({action, icon, active}) => {
+    const isActive = active ? 'active' : '';
+    const fullClassName = `button button-${icon} ${isActive}`;
 
     return (
         <button className={fullClassName} />

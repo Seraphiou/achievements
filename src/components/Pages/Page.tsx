@@ -4,8 +4,8 @@ import { StatelessComponent } from 'react';
 interface IPage {
 }
 
-const Page: StatelessComponent<IPage> = (props) => (
+const SlidePage: StatelessComponent<IPage> = (props) => (
     <div>Une page</div>
 );
 
-export default Page;
+export default SlidePage;

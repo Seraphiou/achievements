@@ -1,10 +1,6 @@
-import {Page, ApplicationState} from "../store/createStore";
 import * as actions from '../actions';
-
-interface Action {
-    type: string;
-    payload: any;
-}
+import {Action} from "../actions";
+import {Page, ApplicationState} from "../store/page";
 
 const initialState = new ApplicationState(Page.HOME);
 
@@ -17,10 +13,11 @@ export default function reducer(state = initialState, action: Action) {
             return new ApplicationState(Page.QUESTIONS);
 
         case actions.GO_NEXT:
-            return;
+
+            return new ApplicationState(state.activePage + 1);
 
         case actions.GO_PREVIOUS:
-            return;
+            return new ApplicationState(state.activePage - 1);
     }
 
     return state;
