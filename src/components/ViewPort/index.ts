@@ -1,13 +1,12 @@
+import {connect} from 'react-redux'
+
 import ViewPort from './ViewPort';
+import State from "../../store/state";
+import {getOffsetTop} from "../../selectors";
 import './ViewPort.scss';
 
-export default ViewPort;
+const mapStateToProps = (state: State) => ({
+    offsetTop: getOffsetTop(state)
+});
 
-
-// export default connect(mapStateToProps)(ViewPort);
-
-/*
-function mapStateToProps(state: string) {
-    return { name: state };
-}
-*/
+export default connect(mapStateToProps)(ViewPort);

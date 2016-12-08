@@ -1,0 +1,41 @@
+.button {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 5px;
+  background: #fff no-repeat center;
+  background-size: 15px 15px;
+  transition: background .5s ease;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    background-color: rgba(#fff, .2);
+  }
+
+  &.active {
+    background-color: rgba(#fff, .1);
+  }
+
+  &.button-GO_NEXT_SLIDE_ACTION {
+    background-image: url('/images/icons/chevron-down.svg');
+  }
+
+  &.button-GO_PREV_SLIDE_ACTION {
+    background-image: url('/images/icons/chevron-up.svg');
+  }
+
+  &.button-GO_HOME_ACTION {
+    background-image: url('/images/icons/home.svg');
+  }
+
+  &.button-GO_QUESTION_ACTION {
+    background-image: url('/images/icons/question.svg');
+  }
+}
+

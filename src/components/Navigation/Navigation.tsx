@@ -1,16 +1,18 @@
 import * as React from 'react';
-import { StatelessComponent } from 'react';
-import './Navigation.scss';
+import {StatelessComponent} from 'react';
 
+import {goNextSlideAction, goPrevSlideAction} from '../../actions';
 import Button from '../Button';
 
 interface INavigation {
+    isPrevActive: boolean;
+    isNextActive: boolean;
 }
 
-const Navigation: StatelessComponent<INavigation> = (props) => (
+const Navigation: StatelessComponent<INavigation> = ({isPrevActive, isNextActive}) => (
     <div className='navigation'>
-        <Button action='NEXT_PAGE' icon='next_icone' class='next'/>
-        <Button action='PREVIOUS_PAGE' icon='previsou_icone' class='previous'/>
+        {isPrevActive && <Button action={goPrevSlideAction}/>}
+        {isNextActive && <Button action={goNextSlideAction}/>}
     </div>
 );
 

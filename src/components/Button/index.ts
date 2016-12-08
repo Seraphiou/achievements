@@ -1,15 +1,12 @@
 import {connect} from 'react-redux'
 
 import Button from './Button';
-
-const mapStateToProps = (state, ownProps) => ({});
+import './Button.scss';
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        //onClick: () => {
-        //    dispatch(setVisibilityFilter(ownProps.filter))
-        //}
+        dispatchAction: () => dispatch(ownProps.action)
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Button);
+export default connect(null, mapDispatchToProps)(Button);
