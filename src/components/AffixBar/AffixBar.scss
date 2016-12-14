@@ -1,50 +1,7 @@
 .affix-bar {
-  //position: absolute;
   display: flex;
-  //top: 0;
-  //right: 0;
-  //height: 100vh;
-  //width: 50px;
-  // -- background-color: rgba(#aaf, .3);
-  // -- box-shadow: -2px 0px 1px 0px rgba(#aaf, .2);
-
   background: rgba(0, 0, 0, 0.3);
-  padding: 10px 0 10px 10px;
-
   align-items: center;
   justify-content: center;
-
-  .navs {
-    .button {
-      &.active {
-        &, &:hover {
-          background-color: rgba(#fff, .4);
-        }
-      }
-      &:hover {
-        background-color: rgba(#fff, .2);
-        transition: background-color .5s ease;
-      }
-      transition: background-color .5s ease;
-      margin: 4px 2px 2px 2px;
-      padding: 3px;
-      cursor: pointer;
-      border-radius: 2px;
-      i {
-        display: block;
-        background-size: 40px 40px;
-        height: 40px;
-        width: 40px;
-        &.question {
-          background-image: url('/images/icons/question.svg');
-        }
-        &.home {
-          background-image: url('/images/icons/home.svg');
-        }
-      }
-    }
-
-  }
-
 }
 

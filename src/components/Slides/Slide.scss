@@ -1,0 +1,14 @@
+.achievement-slide {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 4em;
+    color: white;
+  }
+}
