@@ -4,11 +4,98 @@
   width: 100vw;
   height: 100vh;
 
-  h1 {
-    margin: 0;
+  h1, > div {
     text-align: center;
     flex-grow: 1;
+  }
+
+  h1 {
+    margin: 0;
     font-size: 4em;
     color: white;
+  }
+
+  .menu-puzzle {
+    $item-width: 35vh;
+
+    height: 2 * $item-width;
+    width: 3 * $item-width;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 3px;
+    position: relative;
+
+    > div {
+      display: flex;
+      width: $item-width;
+      height: $item-width;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+
+      @mixin generate-classes($index, $bgColor) {
+        &:nth-child(#{$index}), &:nth-child(#{$index}):after, &:nth-child(#{$index}):before {
+          background: $bgColor;
+        }
+
+        &:nth-child(#{$index}):hover, &:nth-child(#{$index}):hover:after, &:nth-child(#{$index}):hover:before {
+          background: darken($bgColor, 8%)
+        }
+      }
+
+      @include generate-classes(1, #1abc9c);
+      @include generate-classes(2, #3498db);
+      @include generate-classes(3, #34495e);
+      @include generate-classes(4, #f39c12);
+      @include generate-classes(5, #c0392b);
+      @include generate-classes(6, #7f8c8d);
+
+      &:nth-child(7) {
+        background: #e74c3c;
+        position: absolute;
+        width: $item-width / 1.5;
+        height: $item-width / 1.5;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+
+        &:hover {
+        background: darken(#e74c3c, 8%)
+        }
+      }
+
+      &.left:before, &.top:before, &.right:after, &.bottom:after {
+        content: ' ';
+        position: absolute;
+        width: $item-width / 3;
+        height: $item-width / 3;
+        border-radius: 50%;
+        z-index: 2;
+      }
+      &.left:before {
+        left: -$item-width * 0.27;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &.top:before {
+        left: 50%;
+        top: -$item-width * 0.27;
+        transform: translateX(-50%);
+      }
+      &.right:after {
+        right: -$item-width * 0.27;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &.bottom:after {
+        left: 50%;
+        bottom: -$item-width * 0.27;
+        transform: translateX(-50%);
+      }
+    }
   }
 }

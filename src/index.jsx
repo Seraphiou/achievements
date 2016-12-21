@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {render} from 'react-dom';
 import {AppContainer} from 'react-hot-loader';
 import {Provider} from 'react-redux';
@@ -16,8 +16,8 @@ render(
     rootEl
 );
 
-if ('hot' in module) {
-    module['hot']['accept']('./containers/App', () => {
+if (module.hot) {
+    module.hot.accept('./containers/App', () => {
         const NextApp = require('./containers/App').default;
         render(
             <AppContainer>

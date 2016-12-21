@@ -1,11 +1,11 @@
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
 
 import Navigation from './Navigation';
-import './Navigation.scss';
-import State from '../../store/state';
 import {isPrevActive, isNextActive} from '../../selectors';
 
-const mapStateToProps = (state: State) => ({
+import './Navigation.scss';
+
+const mapStateToProps = (state) => ({
     isPrevActive: isPrevActive(state),
     isNextActive: isNextActive(state)
 });

@@ -1,7 +1,8 @@
 .view-port {
-  background: url('/images/bkgn-home.jpg') no-repeat fixed center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/bkgn-home.jpg') no-repeat fixed center center;
   background-size: cover;
   position: relative;
+  overflow: hidden;
 
   .slides {
     position: absolute;

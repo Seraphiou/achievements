@@ -6,7 +6,7 @@
   border-radius: 50%;
   cursor: pointer;
   margin: 5px;
-  background: #fff no-repeat center;
+  background: rgba(#fff, .1) no-repeat center;
   background-size: 15px 15px;
   transition: background .5s ease;
 
@@ -19,7 +19,7 @@
   }
 
   &.active {
-    background-color: rgba(#fff, .1);
+    background-color: rgba(#fff, .8);
   }
 
   &.button-GO_NEXT_SLIDE_ACTION {
@@ -30,11 +30,11 @@
     background-image: url('/images/icons/chevron-up.svg');
   }
 
-  &.button-GO_HOME_ACTION {
+  &.button-GO_PAGE_ACTION_HOME {
     background-image: url('/images/icons/home.svg');
   }
 
-  &.button-GO_QUESTION_ACTION {
+  &.button-GO_PAGE_ACTION_QUESTION {
     background-image: url('/images/icons/question.svg');
   }
 }

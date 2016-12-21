@@ -1,4 +1,4 @@
-import reducer from '../../src/reducers';
+// import reducer from '../../src/reducers';
 import { expect } from 'chai';
 
 describe('Reducer', () => {

@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: [
         'react-hot-loader/patch',
-        'webpack-hot-middleware/client',
+        'webpack-hot-middleware/client?reload=true',
         './src/index'
     ],
 
@@ -15,10 +15,11 @@ module.exports = {
     },
 
     // Enable sourcemaps for debugging webpack's output.
-    devtool: "source-map",
+    devtool: "eval-source-map",
 
     resolve: {
-        extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+        extensions: ['', '.js', '.jsx', '.json']
+
     },
 
     plugins: [
@@ -33,22 +34,16 @@ module.exports = {
     module: {
         preLoaders: [
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-            {test: /\.js$/, loader: "source-map-loader"},
-            {test: /\.tsx$/, loader: 'tslint-loader'}
+            {test: /\.jsx?$/, loader: "eslint-loader", exclude: /node_modules/},
+            {test: /\.js$/, loader: "source-map-loader"}
+
         ],
 
         loaders: [
-            { test: /\.tsx?$/, loader: "ts-loader" },
-            { test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"] },
-            { test: /\.svg\?fill=/, loaders: ['file-loader', 'svg-fill?selector=path,circle'] }
+            {test: /\.jsx?$/, loader: "babel"},
+            {test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"]},
+            {test: /\.svg\?fill=/, loaders: ['file-loader', 'svg-fill?selector=path,circle']}
         ]
-    },
-
-    tslint: {
-        // tslint does not interrupt the compilation by default
-        // if you want any file with tslint errors to fail
-        // set failOnHint to true
-        failOnHint: true
     },
 
     devServer: {

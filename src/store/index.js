@@ -1,5 +1,5 @@
 import {applyMiddleware, createStore} from 'redux';
-import * as createLogger from 'redux-logger';
+import createLogger from 'redux-logger';
 import rootReducer from '../reducers';
 
 // Create a global store
