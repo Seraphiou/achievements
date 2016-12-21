@@ -1,6 +1,6 @@
 import {PAGES} from "./slides";
 
-const createAction = (type, name, payload) => ({type, name, payload});
+export const createAction = (type, name, payload) => ({type, name, payload});
 
 
 // Action names

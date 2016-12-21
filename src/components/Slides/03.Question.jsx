@@ -3,7 +3,7 @@ import Slide from './Slide';
 
 const QuestionSlide = () => (
     <Slide>
-        <h1>De You Have Any Question ?</h1>
+        <h1>Do You Have Any Question ?</h1>
     </Slide>
 );
 
